@@ -1,0 +1,30 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:vue": "cd packages/web && npm run dev",
+    "start:nest": "cd packages/server && npm run start",
+    "start": "concurrently \"pnpm run start:vue\" \"pnpm run start:nest\"",
+    "serve": "serve"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.15.0",
+    "prettier": "^2.3.2",
+    "serve": "^14.2.0"
+  }
+}
